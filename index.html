@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <title>TODO List</title>
+    <script type="module">
+      import Controller from "./controller.js";
+      window.controller = new Controller();
+    </script>
+</head>
+<body class="container">
+    <h2 style="text-align: center;">Organize seu tempo</h2>
+    <br><br>
+    <div>
+        <div class="row">
+            <div class="col-md-3">
+                <h3>Inserir atividade:</h3>
+            </div>
+            <div class="col-md-6">
+                <input type="text" id="atv" class="form-control">
+            </div>
+            <div class="col-md-3">
+                <button style="width: 100%;" class="btn btn-success" onclick="controller.aoClicarAdicionar()">Adicionar(+)</button>
+            </div>
+        </div>
+    </div>
+    <br><br>
+    <div>
+        <h3 style="text-align: center;">A FAZER</h3>
+        <ul id="nao-feitos" class="list-group">
+            
+        </ul>
+    </div>
+    <br><br>
+    <div>
+        <h3 style="text-align: center;">FEITO</h3>
+        <ul id="feitos" class="list-group">
+            
+        </ul>
+    </div>
+</body>
+</html>
